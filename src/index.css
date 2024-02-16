@@ -1,19 +1,147 @@
 body {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(0, 221, 214, 1) 0%,
-    rgba(51, 102, 255, 1) 90%
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    90.2deg,
+    rgba(79, 255, 255, 1) 0.3%,
+    rgba(0, 213, 255, 1) 99.8%
   );
   background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+.socialicons {
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+.history-link {
+  color: black;
+  text-decoration: none;
+}
+.addminheight {
+  min-height: 75vh;
+  padding: 10px;
+}
+.chat-window {
+  /* background-color: white; */
+  padding: 10px;
+  height: 90vh;
+  overflow-y: scroll !important;
+  border-radius: 10px;
+}
+.nav-link {
+  color: black;
+}
+.nav-link:hover {
+  color: white !important;
+}
+.left-bar,
+.right-bar {
+  height: 90vh;
+  border-radius: 10px;
+  overflow-y: scroll !important;
+}
+.makeitcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+.right-bar {
+  background-color: #6f6f6f;
+  padding: 10px;
+}
+.history-content {
+  background-color: #d9d9d9;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 20px !important;
+  border-radius: 10px;
+  /* width: fit-content; */
+}
+.active {
+  background-color: #002068;
   color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  /* width: fit-content;
+  padding: 10px; */
+}
+.active:hover {
+  color: white !important;
+}
+.mobmode {
+  display: none;
+}
+.offcanvas {
+  background-color: #cfb88d !important;
+  /* overflow-x: hidden !important; */
+  max-height: 100vh !important;
+  overflow-y: scroll !important;
 }
 img {
   width: 100%;
   height: auto;
 }
 .logo {
-  max-width: 50px;
+  max-width: 40px;
 }
-.chat-container {
-  min-height: 80vh;
+.icons {
+  font-size: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.menubtn {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .menubtn {
+    display: block;
+  }
+  .history-container {
+    max-height: 58vh;
+    overflow-y: scroll;
+  }
+  .makeitcenter {
+    height: 65vh;
+  }
+  .mobmode {
+    display: block;
+  }
+  .iconloc {
+    position: absolute;
+    bottom: 0;
+  }
+  .active {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  .pcmode {
+    display: none;
+  }
+  .left-bar,
+  .right-bar {
+    min-height: 0vh;
+    max-height: 30px;
+  }
+  .addminheight {
+    min-height: 65vh;
+  }
+  /* .makeitcenter {
+    height: 75vh !important;
+  } */
+}
+.footercss {
+  cursor: pointer;
 }
